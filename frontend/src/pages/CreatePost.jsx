@@ -84,7 +84,7 @@ const CreatePost = () => {
                             onChange={handleFileChange}
                             type="file"
                             id="fileInput"
-                            accept="image/*" // Only allow image files
+                            accept="image/*" 
                             className="hidden"
                         />
                         <label

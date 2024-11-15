@@ -26,20 +26,18 @@ const Login = () => {
       setUser(res.data);
       toast.success("Login successful!");
   
-      // Redirect to home page after successful login
       
     } catch (err) {
       setError(true);
       toast.error("Login failed. Please try again.");
       console.log(err);
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
   useEffect(() => {
     if (user) {
-      // Redirect to home if the user is already logged in
-      navigate("/", { replace: true }); // replace ensures they cannot go back
+      navigate("/", { replace: true }); 
     }
   }, [user, navigate]);
 
@@ -66,7 +64,7 @@ const Login = () => {
           />
           <button
             onClick={handleLogin}
-            disabled={loading} // Disable button when loading
+            disabled={loading} 
             className={`w-full px-4 py-3 font-semibold text-white ${
               loading
                 ? "bg-gray-400 cursor-not-allowed"

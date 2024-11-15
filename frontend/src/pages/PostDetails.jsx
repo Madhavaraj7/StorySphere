@@ -49,9 +49,7 @@ const PostDetails = () => {
         </div>
       ) : (
         <div className="container mx-auto px-4 md:px-20 py-12">
-          {/* Post Header */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
-            {/* Post Title and Actions */}
             <div className="flex justify-between items-center mb-6">
               <h1 className="text-4xl font-bold text-gray-800">{post.title}</h1>
               {user?._id === post?.userId && (
@@ -68,7 +66,6 @@ const PostDetails = () => {
               )}
             </div>
 
-            {/* Author and Timestamp */}
             <div className="flex items-center justify-between text-gray-500 mb-8">
               <p className="text-lg">@{post.username}</p>
               <div className="text-sm">
@@ -77,7 +74,6 @@ const PostDetails = () => {
               </div>
             </div>
 
-            {/* Post Image */}
             {post.photo && (
               <div className="w-full overflow-hidden rounded-lg shadow-lg mb-8">
                 <img
@@ -88,7 +84,6 @@ const PostDetails = () => {
               </div>
             )}
 
-            {/* Post Description */}
             <div className="text-gray-800 leading-relaxed text-lg space-y-4">
               <p>{post.desc}</p>
             </div>
@@ -96,7 +91,6 @@ const PostDetails = () => {
         </div>
       )}
 
-      {/* Delete Confirmation Modal */}
       {showModal && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">

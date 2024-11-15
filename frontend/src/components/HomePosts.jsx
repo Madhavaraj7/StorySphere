@@ -4,7 +4,6 @@ import { IF } from '../url';
 const HomePosts = ({ post }) => {
   return (
     <div className="w-full flex mt-8 space-x-4 bg-white shadow-md rounded-lg overflow-hidden transition-transform duration-300 transform hover:scale-105 hover:shadow-xl">
-      {/* left */}
       <div className="w-[35%] h-[200px] flex justify-center items-center">
         <img
           src={IF + post.photo}
@@ -12,7 +11,6 @@ const HomePosts = ({ post }) => {
           className="h-full w-full object-cover rounded-l-lg"
         />
       </div>
-      {/* right */}
       <div className="flex flex-col w-[65%] p-4">
         <h1 className="text-xl font-semibold mb-2 text-gray-800 md:text-2xl truncate">
           {post.title}

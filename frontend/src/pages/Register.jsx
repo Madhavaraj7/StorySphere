@@ -11,25 +11,25 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false); // Loading state
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleRegister = async () => {
-    setLoading(true); // Start loading
+    setLoading(true); 
     try {
       await axios.post(URL + "/api/auth/register", { username, email, password });
       setUsername("");
       setEmail("");
       setPassword("");
       setError(false);
-      toast.success("Registration successful!"); // Show success toast
-      setTimeout(() => navigate("/login"), 2000); // Delay before navigating to login page
+      toast.success("Registration successful!"); 
+      setTimeout(() => navigate("/login"), 2000); 
     } catch (err) {
       setError(true);
       toast.error("Registration failed. Please try again.");
       console.log(err);
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
 
@@ -37,7 +37,6 @@ const Register = () => {
     <>
       <ToastContainer position="top-center" autoClose={2000} />
 
-      {/* Registration Form */}
       <div className="w-full flex justify-center items-center h-[80vh]">
         <div className="flex flex-col justify-center items-center space-y-4 w-[80%] md:w-[25%] bg-white p-6 rounded-lg shadow-lg">
           <h1 className="text-xl font-bold text-left">Create an Account</h1>
@@ -64,7 +63,7 @@ const Register = () => {
           />
           <button 
             onClick={handleRegister} 
-            disabled={loading} // Disable button when loading
+            disabled={loading} 
             className={`w-full px-4 py-2 text-lg font-bold text-white ${
               loading
                 ? "bg-gray-400 cursor-not-allowed"

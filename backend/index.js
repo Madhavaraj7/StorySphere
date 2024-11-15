@@ -30,7 +30,7 @@ const connectDB = async () => {
 // Middleware configuration
 dotenv.config();
 app.use(express.json());
-app.use("/images", express.static(imagesDir)); // Serve static files from the 'images' folder
+app.use("/images", express.static(imagesDir)); 
 app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(cookieParser());
 app.use("/api/auth", authRoute);
@@ -39,10 +39,10 @@ app.use("/api/posts", postRoute);
 // Image upload configuration
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, imagesDir); // Save images to the images directory
+    cb(null, imagesDir); 
   },
   filename: (req, file, cb) => {
-    cb(null, req.body.img); // Use the img field from the request body as the filename
+    cb(null, req.body.img); 
   },
 });
 
