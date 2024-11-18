@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 md:px-10 lg:px-20 py-4 bg-gradient-to-r from-purple-700 via-indigo-600 to-purple-700 shadow-lg">
       <h1 className="text-2xl font-extrabold text-white hover:text-gray-100 transition-transform duration-300 hover:scale-105">
-        <Link to="/">CodeWave</Link>
+        <Link to="/">StorySphere</Link>
       </h1>
 
       {path === "/" && (

@@ -12,7 +12,7 @@ function Footer() {
     <footer className="bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-600 text-white py-8">
       <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center">
         <div className="mb-4 md:mb-0 text-center md:text-left">
-          <h2 className="text-2xl font-bold">CodeWave</h2>
+          <h2 className="text-2xl font-bold">StorySphere</h2>
           <p className="text-gray-200 mt-2">
             Discover stories, insights, and experiences from around the world.
           </p>
@@ -78,7 +78,7 @@ function Footer() {
       {/* Footer Bottom */}
       <div className="border-t border-gray-500 mt-8 pt-4 text-center text-sm text-gray-400">
         <p>
-          &copy; {new Date().getFullYear()} CodeWave. All rights reserved.
+          &copy; {new Date().getFullYear()} StorySphere. All rights reserved.
         </p>
       </div>
     </footer>
